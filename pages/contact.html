@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact StudentHub for queries, admissions, IT support, and administrative assistance.">
+    <title>StudentHub | University Contact &amp; Campus Support</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Contact Dedicated CSS -->
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <div class="container">
+
+            <!-- TOP HEADER -->
+            <div class="top-header">
+                <!-- University Portal Logo -->
+                <a href="../index.html" class="logo" aria-label="StudentHub Home">
+                    <span class="logo-icon"><i class="bi bi-mortarboard-fill"></i></span>
+                    StudentHub
+                </a>
+
+                <!-- Header Actions: Theme Switcher & Login -->
+                <div class="header-actions">
+                    <button class="btn-theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Theme">
+                        <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                    </button>
+
+                    <a href="login.html" class="login-link">
+                        <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                    </a>
+                </div>
+            </div>
+
+            <!-- ================= NAVIGATION ================= -->
+            <nav class="navbar navbar-expand-lg navbar-dark p-0" aria-label="Main navigation">
+                <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#studentNav" aria-controls="studentNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="studentNav">
+                    <div class="navbar-nav me-auto">
+                        <a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1"></i> Home</a>
+                        <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i> About</a>
+                        <a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2 me-1"></i> Dashboard</a>
+                        <a class="nav-link" href="events.html"><i class="bi bi-calendar-event me-1"></i> Events</a>
+                        <a class="nav-link" href="faq.html"><i class="bi bi-question-circle me-1"></i> FAQ</a>
+                        <a class="nav-link" href="feedback.html"><i class="bi bi-chat-square-dots me-1"></i> Feedback</a>
+                        <a class="nav-link active" href="contact.html" aria-current="page"><i class="bi bi-envelope me-1"></i> Contact</a>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <!-- ================= INTRO ================= -->
+        <section class="contact-intro">
+            <div class="container text-center">
+                <span class="section-tag">
+                    <i class="bi bi-headset me-1"></i> CAMPUS HELPDESK
+                </span>
+                <h1>Contact &amp; Student Support</h1>
+                <p>
+                    Have questions regarding university admissions, technical portal access, or student administrative queries? Reach out to our campus offices.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT CONTENT ================= -->
+        <section class="contact-container">
+            <div class="container">
+                <div class="row g-4">
+
+                    <!-- ================= MESSAGE FORM ================= -->
+                    <div class="col-12 col-lg-7">
+                        <div class="message-section">
+                            <h2>Send Us an Academic Inquiry</h2>
+                            <p class="section-subtitle">Fill in your information and our departmental coordinators will get back to you within 24–48 hours.</p>
+
+                            <form id="contactForm" action="../php/contact_process.php" method="POST">
+
+                                <!-- NAME & EMAIL GRID -->
+                                <div class="form-grid-2 mb-3">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">
+                                            Full Name <span class="text-danger">*</span>
+                                        </label>
+                                        <div class="input-wrapper">
+                                            <span class="input-icon"><i class="bi bi-person"></i></span>
+                                            <input 
+                                                type="text" 
+                                                class="form-control" 
+                                                id="name" 
+                                                name="name" 
+                                                placeholder="e.g. Rahul Sharma" 
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">
+                                            Student / Contact Email <span class="text-danger">*</span>
+                                        </label>
+                                        <div class="input-wrapper">
+                                            <span class="input-icon"><i class="bi bi-envelope"></i></span>
+                                            <input 
+                                                type="email" 
+                                                class="form-control" 
+                                                id="email" 
+                                                name="email" 
+                                                placeholder="student@university.edu" 
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- SUBJECT -->
+                                <div class="form-group mb-3">
+                                    <label for="subject" class="form-label">
+                                        Inquiry Subject <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="input-wrapper">
+                                        <span class="input-icon"><i class="bi bi-card-heading"></i></span>
+                                        <input 
+                                            type="text" 
+                                            class="form-control" 
+                                            id="subject" 
+                                            name="subject" 
+                                            placeholder="e.g. Course Registration Assistance" 
+                                            required>
+                                    </div>
+                                </div>
+
+                                <!-- MESSAGE -->
+                                <div class="form-group mb-4">
+                                    <label for="message" class="form-label">
+                                        Message Details <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="input-wrapper textarea-wrapper">
+                                        <span class="input-icon textarea-icon"><i class="bi bi-chat-text"></i></span>
+                                        <textarea 
+                                            class="form-control" 
+                                            id="message" 
+                                            name="message" 
+                                            rows="5" 
+                                            placeholder="Write your inquiry or question in detail..." 
+                                            required></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- SUBMIT -->
+                                <button type="submit" class="btn btn-primary submit-contact-btn">
+                                    <span>Send Message</span>
+                                    <i class="bi bi-send-fill ms-2"></i>
+                                </button>
+
+                                <!-- FORM ALERT MESSAGE -->
+                                <p id="formMessage" class="form-alert-message mt-3" aria-live="polite"></p>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- ================= INFORMATION ================= -->
+                    <div class="col-12 col-lg-5">
+                        <div class="contact-information">
+                            <h2>Campus Information</h2>
+                            <p class="section-subtitle">Direct institutional points of contact.</p>
+
+                            <div class="info-list">
+
+                                <!-- Address -->
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h3>Campus Address</h3>
+                                        <p>
+                                            Administrative Block A, 100 University Boulevard,
+                                            <br>
+                                            Academic City, State - 560001
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="bi bi-telephone-outbound-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h3>Registrar Desk &amp; Hotline</h3>
+                                        <p>+91 98765 43210 / +91 (080) 2345-6789</p>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="bi bi-envelope-check-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h3>Electronic Mail</h3>
+                                        <p>support@studenthub.edu | registrar@university.edu</p>
+                                    </div>
+                                </div>
+
+                                <!-- Working Hours -->
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="bi bi-clock-history"></i>
+                                    </div>
+                                    <div>
+                                        <h3>Office &amp; Helpdesk Hours</h3>
+                                        <p>
+                                            Monday – Friday: 9:00 AM – 5:00 PM
+                                            <br>
+                                            Saturday (Counseling): 10:00 AM – 1:00 PM
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <!-- StudentHub -->
+                <section class="footer-about">
+                    <h2><i class="bi bi-mortarboard-fill me-2 text-primary-accent"></i>StudentHub</h2>
+                    <p>
+                        Official university student management and academic collaboration ecosystem. Dedicated to scholastic innovation and student welfare.
+                    </p>
+                </section>
+
+                <!-- Quick Links -->
+                <nav class="quick-links" aria-label="Footer navigation">
+                    <h2>Quick Links</h2>
+                    <a href="../index.html"><i class="bi bi-chevron-right me-1"></i> Home</a>
+                    <a href="about.html"><i class="bi bi-chevron-right me-1"></i> About</a>
+                    <a href="events.html"><i class="bi bi-chevron-right me-1"></i> Events</a>
+                    <a href="contact.html"><i class="bi bi-chevron-right me-1"></i> Contact</a>
+                </nav>
+
+                <!-- Support -->
+                <nav class="quick-links" aria-label="Support navigation">
+                    <h2>Support</h2>
+                    <a href="faq.html"><i class="bi bi-chevron-right me-1"></i> FAQ</a>
+                    <a href="feedback.html"><i class="bi bi-chevron-right me-1"></i> Feedback</a>
+                    <a href="contact.html"><i class="bi bi-chevron-right me-1"></i> Helpdesk</a>
+                </nav>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright text-center">
+                <p>&copy; 2026 StudentHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Contact JavaScript -->
+    <script src="../js/contact.js"></script>
+
+</body>
+
+</html>

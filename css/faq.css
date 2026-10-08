@@ -1,0 +1,455 @@
+@import url('[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap)');
+
+/* ==========================================================================
+   1. Theme Tokens (Light Mode Default)
+   ========================================================================== */
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-glow: rgba(79, 70, 229, 0.28);
+  --primary-soft: rgba(79, 70, 229, 0.1);
+  --accent-light: #a5b4fc;
+
+  --header-bg-start: #0f172a;
+  --header-bg-end: #1e1b4b;
+
+  --body-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --footer-bg: #090d16;
+
+  --text-main: #0f172a;
+  --text-sub: #64748b;
+  --text-muted: #94a3b8;
+
+  --hero-radial-start: #e0e7ff;
+  --hero-radial-end: #f8fafc;
+
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   2. Dark Mode Overrides (data-bs-theme="dark")
+   ========================================================================== */
+[data-bs-theme="dark"] {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-glow: rgba(99, 102, 241, 0.4);
+  --primary-soft: rgba(99, 102, 241, 0.18);
+  --accent-light: #c7d2fe;
+
+  --body-bg: #0b0f19;
+  --card-bg: #111827;
+  --border-color: #1f2937;
+  --footer-bg: #030712;
+
+  --text-main: #f8fafc;
+  --text-sub: #cbd5e1;
+  --text-muted: #64748b;
+
+  --hero-radial-start: #1e1b4b;
+  --hero-radial-end: #0b0f19;
+}
+
+/* ==========================================================================
+   3. Global Reset & Base
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-sub);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-primary-accent {
+  color: var(--primary) !important;
+}
+
+/* ==========================================================================
+   4. Header & Top Bar Navigation (FLEXBOX)
+   ========================================================================== */
+.site-header {
+  background: linear-gradient(135deg, var(--header-bg-start) 0%, var(--header-bg-end) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.03em;
+}
+
+.logo:hover {
+  color: #ffffff;
+}
+
+.logo-icon {
+  color: var(--accent-light);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.login:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Theme Toggle Button */
+.btn-theme-toggle {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fbbf24;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: rotate(20deg) scale(1.08);
+}
+
+header nav {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.4rem 0;
+}
+
+header nav .nav-link {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.15rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+header nav .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+header nav .nav-link.active {
+  color: #ffffff !important;
+  background-color: var(--primary);
+  font-weight: 600;
+  box-shadow: 0 2px 8px var(--primary-glow);
+}
+
+/* ==========================================================================
+   5. FAQ Section & Heading
+   ========================================================================== */
+.faq-section {
+  background: radial-gradient(circle at 50% 10%, var(--hero-radial-start) 0%, var(--hero-radial-end) 70%);
+  padding: 3.5rem 0 5rem;
+  min-height: calc(100vh - 220px);
+}
+
+.faq-heading {
+  margin-bottom: 3rem;
+}
+
+.section-tag {
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50rem;
+  border: 1px solid var(--primary-soft);
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.faq-heading h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.faq-heading .intro {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--text-sub);
+}
+
+/* ==========================================================================
+   6. FAQ Accordion Items (FLEXBOX)
+   ========================================================================== */
+.faq-accordion-wrapper {
+  max-width: 820px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.faq-item:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.08);
+}
+
+/* Question Header Button */
+.faq-question {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.faq-question .question-text {
+  display: inline-flex;
+  align-items: center;
+}
+
+.faq-question .symbol {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-left: 1rem;
+  transition: transform 0.25s ease;
+}
+
+.faq-question[aria-expanded="true"] {
+  color: var(--primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Answer Body */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  background-color: var(--card-bg);
+  padding: 0 1.5rem;
+}
+
+.faq-answer.open {
+  max-height: 250px;
+  padding: 1.25rem 1.5rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-sub);
+  line-height: 1.65;
+}
+
+.faq-link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.faq-link:hover {
+  text-decoration: underline;
+}
+
+.faq-code {
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.88rem;
+}
+
+/* ==========================================================================
+   7. Helpdesk Callout Card (FLEXBOX)
+   ========================================================================== */
+.help-cta-card {
+  max-width: 820px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  border: 1px dashed var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.help-cta-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.help-cta-card p {
+  font-size: 0.95rem;
+  color: var(--text-sub);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.help-cta-card .btn {
+  font-weight: 600;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, #6366f1 100%);
+  border: none;
+  box-shadow: 0 4px 12px var(--primary-glow);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px var(--primary-glow);
+}
+
+.btn-outline-primary {
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   8. Footer (CSS GRID & FLEXBOX)
+   ========================================================================== */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--text-muted);
+  padding: 3.5rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.footer-about h2,
+.footer-links h2 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  max-width: 380px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.copyright p {
+  margin: 0;
+}

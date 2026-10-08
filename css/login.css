@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================================================
+   1. Theme Tokens (Light Mode Default)
+   ========================================================================== */
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-glow: rgba(79, 70, 229, 0.28);
+  --primary-soft: rgba(79, 70, 229, 0.1);
+  --accent-light: #a5b4fc;
+
+  --header-bg-start: #0f172a;
+  --header-bg-end: #1e1b4b;
+
+  --body-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --footer-bg: #090d16;
+
+  --text-main: #0f172a;
+  --text-sub: #64748b;
+  --text-muted: #94a3b8;
+
+  --captcha-bg: #e2e8f0;
+  --captcha-text: #312e81;
+
+  --hero-radial-start: #e0e7ff;
+  --hero-radial-end: #f8fafc;
+
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   2. Dark Mode Overrides (data-bs-theme="dark")
+   ========================================================================== */
+[data-bs-theme="dark"] {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-glow: rgba(99, 102, 241, 0.4);
+  --primary-soft: rgba(99, 102, 241, 0.18);
+  --accent-light: #c7d2fe;
+
+  --body-bg: #0b0f19;
+  --card-bg: #111827;
+  --border-color: #1f2937;
+  --footer-bg: #030712;
+
+  --text-main: #f8fafc;
+  --text-sub: #cbd5e1;
+  --text-muted: #64748b;
+
+  --captcha-bg: #1e293b;
+  --captcha-text: #a5b4fc;
+
+  --hero-radial-start: #1e1b4b;
+  --hero-radial-end: #0b0f19;
+}
+
+/* ==========================================================================
+   3. Global Reset & Base
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-sub);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-primary-accent {
+  color: var(--accent-light);
+}
+
+/* ==========================================================================
+   4. Header & Top Bar Navigation (FLEXBOX)
+   ========================================================================== */
+.site-header {
+  background: linear-gradient(135deg, var(--header-bg-start) 0%, var(--header-bg-end) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.03em;
+}
+
+.logo:hover {
+  color: #ffffff;
+}
+
+.logo-icon {
+  color: var(--accent-light);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.login-link:hover,
+.login-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Theme Toggle Button */
+.btn-theme-toggle {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fbbf24;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: rotate(20deg) scale(1.08);
+}
+
+header nav {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.4rem 0;
+}
+
+header nav .nav-link {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.15rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+header nav .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   5. Login Section & Wrapper
+   ========================================================================== */
+.login-section {
+  background: radial-gradient(circle at 50% 10%, var(--hero-radial-start) 0%, var(--hero-radial-end) 70%);
+  padding: 3.5rem 0 5rem;
+  min-height: calc(100vh - 220px);
+}
+
+.login-heading {
+  margin-bottom: 2.25rem;
+}
+
+.section-tag {
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50rem;
+  border: 1px solid var(--primary-soft);
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.login-heading h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.login-heading .welcome {
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--text-sub);
+}
+
+/* Centered Form Card */
+.login-box-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.login-box {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+  padding: 2.5rem 2.25rem;
+  transition: var(--transition-smooth);
+}
+
+/* ==========================================================================
+   6. Form Controls & Inputs (FLEXBOX)
+   ========================================================================== */
+.form-group .form-label,
+.captcha-section .form-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  color: var(--text-sub);
+  font-size: 1.1rem;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.input-wrapper .form-control {
+  padding-left: 44px;
+  height: 48px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+}
+
+.input-wrapper .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-glow);
+  background-color: var(--card-bg);
+  color: var(--text-main);
+}
+
+/* Options (Remember & Forgot Password) */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+}
+
+.remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  color: var(--text-sub);
+}
+
+.remember input[type="checkbox"] {
+  accent-color: var(--primary);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.forgot-link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   7. Security CAPTCHA Widget (FLEXBOX)
+   ========================================================================== */
+.captcha-section {
+  background-color: var(--body-bg);
+  border: 1px dashed var(--border-color);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.captcha-display-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.captcha-code {
+  background-color: var(--captcha-bg);
+  color: var(--captcha-text);
+  font-family: 'Courier New', monospace;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.4rem;
+  padding: 0.4rem 1.25rem;
+  border-radius: 8px;
+  display: inline-block;
+  user-select: none;
+  text-decoration: line-through;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.btn-captcha-refresh {
+  background-color: var(--card-bg);
+  border: 1.5px solid var(--border-color);
+  color: var(--text-main);
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-captcha-refresh:hover {
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  transform: rotate(180deg);
+}
+
+/* Terms Checkbox */
+.terms-group {
+  display: flex;
+  align-items: center;
+}
+
+.terms-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--text-sub);
+  cursor: pointer;
+}
+
+.terms-label input[type="checkbox"] {
+  accent-color: var(--primary);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.terms-label a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.terms-label a:hover {
+  text-decoration: underline;
+}
+
+/* Submit Action Button */
+.login-button {
+  background: linear-gradient(135deg, var(--primary) 0%, #6366f1 100%);
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px var(--primary-glow);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.login-button:hover {
+  background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--primary-glow);
+}
+
+.register-text {
+  font-size: 0.92rem;
+  color: var(--text-sub);
+}
+
+.register-text a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+/* Modal Overrides */
+.modal-content {
+  background-color: var(--card-bg);
+  color: var(--text-sub);
+}
+
+/* ==========================================================================
+   8. Footer (CSS GRID & FLEXBOX)
+   ========================================================================== */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--text-muted);
+  padding: 3.5rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.footer-about h2,
+.footer-links h2 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  max-width: 380px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.copyright p {
+  margin: 0;
+}

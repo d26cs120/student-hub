@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View and manage your StudentHub student profile, department details, and account credentials.">
+    <title>StudentHub | Student Profile</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Profile Dedicated CSS -->
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <div class="container">
+
+            <!-- TOP HEADER -->
+            <div class="top-header">
+                <!-- LOGO -->
+                <a href="../index.html" class="logo" aria-label="StudentHub Home">
+                    <span class="logo-icon"><i class="bi bi-mortarboard-fill"></i></span>
+                    StudentHub
+                </a>
+
+                <!-- Header Actions: Theme Switcher & Logout -->
+                <div class="header-actions">
+                    <button class="btn-theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Theme">
+                        <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                    </button>
+
+                    <a href="login.html" class="logout">
+                        <i class="bi bi-box-arrow-right me-1"></i> Logout
+                    </a>
+                </div>
+            </div>
+
+            <!-- ================= NAVIGATION ================= -->
+            <nav class="navbar navbar-expand-lg navbar-dark p-0" aria-label="Main navigation">
+                <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#studentNav" aria-controls="studentNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="studentNav">
+                    <div class="navbar-nav me-auto">
+                        <a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1"></i> Home</a>
+                        <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i> About</a>
+                        <a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2 me-1"></i> Dashboard</a>
+                        <a class="nav-link" href="events.html"><i class="bi bi-calendar-event me-1"></i> Events</a>
+                        <a class="nav-link" href="faq.html"><i class="bi bi-question-circle me-1"></i> FAQ</a>
+                        <a class="nav-link" href="feedback.html"><i class="bi bi-chat-square-dots me-1"></i> Feedback</a>
+                        <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i> Contact</a>
+                        <a class="nav-link active" href="profile.html" aria-current="page"><i class="bi bi-person-badge me-1"></i> Profile</a>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <section class="profile-section">
+            <div class="container">
+
+                <!-- HEADING -->
+                <div class="profile-heading text-center">
+                    <span class="section-tag">
+                        <i class="bi bi-shield-check me-1"></i> VERIFIED STUDENT RECORD
+                    </span>
+                    <h1>Student Digital Profile</h1>
+                    <p>
+                        View and manage your academic identity, department enrolment, and security credentials.
+                    </p>
+                </div>
+
+                <!-- ================= PROFILE CARD ================= -->
+                <div class="profile-box-wrapper">
+                    <div class="profile-box">
+
+                        <!-- AVATAR HEADER -->
+                        <div class="profile-avatar-header">
+                            <div class="avatar-shield">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                            <div class="avatar-title">
+                                <h2>Uday Thakur</h2>
+                                <span class="badge-status"><i class="bi bi-check-circle-fill me-1"></i> Active Student Enrolment</span>
+                            </div>
+                        </div>
+
+                        <!-- PROFILE DETAILS GRID -->
+                        <div class="profile-details-grid">
+
+                            <!-- NAME -->
+                            <div class="profile-field">
+                                <span class="field-label"><i class="bi bi-person me-2 text-primary-accent"></i>Full Name</span>
+                                <span class="field-value">Uday Thakur</span>
+                            </div>
+
+                            <!-- STUDENT ID -->
+                            <div class="profile-field">
+                                <span class="field-label"><i class="bi bi-card-text me-2 text-primary-accent"></i>Student ID / Roll No.</span>
+                                <span class="field-value badge-id">CE2026-129</span>
+                            </div>
+
+                            <!-- EMAIL -->
+                            <div class="profile-field">
+                                <span class="field-label"><i class="bi bi-envelope me-2 text-primary-accent"></i>Student Email</span>
+                                <span class="field-value">uday@example.com</span>
+                            </div>
+
+                            <!-- PHONE -->
+                            <div class="profile-field">
+                                <span class="field-label"><i class="bi bi-telephone me-2 text-primary-accent"></i>Phone Number</span>
+                                <span class="field-value">+91 9876543210</span>
+                            </div>
+
+                            <!-- DEPARTMENT -->
+                            <div class="profile-field">
+                                <span class="field-label"><i class="bi bi-buildings me-2 text-primary-accent"></i>Academic Department</span>
+                                <span class="field-value">Computer Engineering</span>
+                            </div>
+
+                            <!-- SEMESTER -->
+                            <div class="profile-field">
+                                <span class="field-label"><i class="bi bi-calendar3 me-2 text-primary-accent"></i>Current Semester</span>
+                                <span class="field-value">4th Semester (Year 2)</span>
+                            </div>
+
+                        </div>
+
+                        <!-- ================= ACTIONS ================= -->
+                        <div class="profile-actions">
+                            <button type="button" id="editProfile" class="btn btn-primary">
+                                <i class="bi bi-pencil-square me-2"></i> Edit Profile
+                            </button>
+
+                            <button type="button" id="changePassword" class="btn btn-outline-primary">
+                                <i class="bi bi-key me-2"></i> Change Password
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+
+                <!-- ABOUT STUDENTHUB -->
+                <section class="footer-about">
+                    <h2><i class="bi bi-mortarboard-fill me-2 text-primary-accent"></i>StudentHub</h2>
+                    <p>
+                        Official university student management and academic collaboration ecosystem. Dedicated to scholastic innovation and student welfare.
+                    </p>
+                </section>
+
+                <!-- QUICK LINKS -->
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <h2>Quick Links</h2>
+                    <a href="../index.html"><i class="bi bi-chevron-right me-1"></i> Home</a>
+                    <a href="about.html"><i class="bi bi-chevron-right me-1"></i> About</a>
+                    <a href="events.html"><i class="bi bi-chevron-right me-1"></i> Events</a>
+                    <a href="contact.html"><i class="bi bi-chevron-right me-1"></i> Contact</a>
+                </nav>
+
+                <!-- SUPPORT -->
+                <nav class="footer-links" aria-label="Support navigation">
+                    <h2>Support</h2>
+                    <a href="faq.html"><i class="bi bi-chevron-right me-1"></i> FAQ</a>
+                    <a href="feedback.html"><i class="bi bi-chevron-right me-1"></i> Feedback</a>
+                    <a href="contact.html"><i class="bi bi-chevron-right me-1"></i> Helpdesk</a>
+                </nav>
+
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div class="copyright text-center">
+                <p>&copy; 2026 StudentHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Profile JavaScript -->
+    <script src="../js/profile.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your StudentHub student account.">
+    <title>StudentHub | Student Registration</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Register Dedicated CSS -->
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <div class="top-header container-fluid">
+            <a href="../index.html" class="logo" aria-label="StudentHub Home">
+                <span class="logo-icon"><i class="bi bi-mortarboard-fill"></i></span>
+                StudentHub
+            </a>
+
+            <div class="header-actions">
+                <!-- Theme Toggle Button -->
+                <button class="btn-theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Theme">
+                    <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                </button>
+
+                <a href="login.html" class="login-link">
+                    <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= NAVIGATION ================= -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <div class="navbar-nav mx-auto">
+                        <a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1"></i> Home</a>
+                        <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i> About</a>
+                        <a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2 me-1"></i> Dashboard</a>
+                        <a class="nav-link" href="events.html"><i class="bi bi-calendar-event me-1"></i> Events</a>
+                        <a class="nav-link" href="faq.html"><i class="bi bi-question-circle me-1"></i> FAQ</a>
+                        <a class="nav-link" href="feedback.html"><i class="bi bi-chat-square-dots me-1"></i> Feedback</a>
+                        <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i> Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+        <section class="register-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-11 col-lg-9 col-xl-8">
+
+                        <!-- REGISTER CARD -->
+                        <div class="register-box">
+
+                            <div class="register-header">
+                                <div class="register-icon">
+                                    <i class="bi bi-person-vcard-fill"></i>
+                                </div>
+                                <h1>Student Registration</h1>
+                                <p>Fill in your details below to set up your StudentHub academic profile.</p>
+                               
+                            </div>
+
+                            <!-- FORM WITH NATIVE HTML5 VALIDATION -->
+                            <form id="registerForm" action="../php/register_process.php" method="POST" novalidate>
+
+                            <!-- FULL NAME -->
+                            <div class="form-group mb-3">
+                                <label for="fullname">
+                                    Full Name <span class="text-danger">*</span>
+                                </label>
+
+                                <div class="input-wrapper">
+                                    <span class="input-icon">
+                                        <i class="bi bi-person"></i>
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="fullname"
+                                        name="fullname"
+                                        class="form-control"
+                                        placeholder="e.g. Rahul Sharma"
+                                        required
+                                    >
+                                </div>
+
+                                <small class="error-message" id="fullnameError"></small>
+                            </div>
+
+
+                            <!-- EMAIL & MOBILE -->
+                            <div class="form-grid-2 mb-3">
+
+                                <div class="form-group">
+                                    <label for="email">
+                                        Student Email <span class="text-danger">*</span>
+                                    </label>
+
+                                    <div class="input-wrapper">
+                                        <span class="input-icon">
+                                            <i class="bi bi-envelope"></i>
+                                        </span>
+
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            class="form-control"
+                                            placeholder="student@example.com"
+                                            required
+                                        >
+                                    </div>
+
+                                    <small class="error-message" id="emailError"></small>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="mobile">
+                                        Mobile Number <span class="text-danger">*</span>
+                                    </label>
+
+                                    <div class="input-wrapper">
+                                        <span class="input-icon">
+                                            <i class="bi bi-phone"></i>
+                                        </span>
+
+                                        <input
+                                            type="tel"
+                                            id="mobile"
+                                            name="mobile"
+                                            class="form-control"
+                                            placeholder="10-digit mobile number"
+                                            maxlength="10"
+                                            required
+                                        >
+                                    </div>
+
+                                    <small class="error-message" id="mobileError"></small>
+                                </div>
+
+                            </div>
+
+
+                            <!-- GENDER -->
+                            <div class="form-group mb-3">
+
+                                <label>
+                                    Gender <span class="text-danger">*</span>
+                                </label>
+
+                                <div class="gender-radio-group">
+
+                                    <label class="gender-option">
+                                        <input type="radio" name="gender" value="male">
+                                        <span class="gender-pill">
+                                            <i class="bi bi-gender-male"></i> Male
+                                        </span>
+                                    </label>
+
+                                    <label class="gender-option">
+                                        <input type="radio" name="gender" value="female">
+                                        <span class="gender-pill">
+                                            <i class="bi bi-gender-female"></i> Female
+                                        </span>
+                                    </label>
+
+                                    <label class="gender-option">
+                                        <input type="radio" name="gender" value="other">
+                                        <span class="gender-pill">
+                                            <i class="bi bi-gender-ambiguous"></i> Other
+                                        </span>
+                                    </label>
+
+                                </div>
+
+                                <small class="error-message" id="genderError"></small>
+
+                            </div>
+
+
+                            <!-- COURSE & YEAR -->
+                            <div class="form-grid-2 mb-3">
+
+                                <div class="form-group">
+
+                                    <label for="course">
+                                        Course <span class="text-danger">*</span>
+                                    </label>
+
+                                    <div class="input-wrapper">
+                                        <span class="input-icon">
+                                            <i class="bi bi-book"></i>
+                                        </span>
+
+                                        <select id="course" name="course" class="form-select">
+                                            <option value="">Select Course</option>
+                                            <option value="cse">B.Tech - CSE</option>
+                                            <option value="it">B.Tech - IT</option>
+                                            <option value="bca">BCA</option>
+                                            <option value="mca">MCA</option>
+                                        </select>
+                                    </div>
+
+                                    <small class="error-message" id="courseError"></small>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="year">
+                                        Academic Year <span class="text-danger">*</span>
+                                    </label>
+
+                                    <div class="input-wrapper">
+                                        <span class="input-icon">
+                                            <i class="bi bi-calendar3"></i>
+                                        </span>
+
+                                        <select id="year" name="year" class="form-select">
+                                            <option value="">Select Year</option>
+                                            <option value="1">1st Year</option>
+                                            <option value="2">2nd Year</option>
+                                            <option value="3">3rd Year</option>
+                                            <option value="4">4th Year</option>
+                                        </select>
+                                    </div>
+
+                                    <small class="error-message" id="yearError"></small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PASSWORD -->
+                            <div class="form-grid-2 mb-3">
+
+                                <div class="form-group">
+
+                                    <label for="password">
+                                        Password <span class="text-danger">*</span>
+                                    </label>
+
+                                    <div class="input-wrapper">
+                                        <span class="input-icon">
+                                            <i class="bi bi-lock"></i>
+                                        </span>
+
+                                        <input
+                                            type="password"
+                                            id="password"
+                                            name="password"
+                                            class="form-control"
+                                            placeholder="At least 8 characters"
+                                            required
+                                        >
+                                    </div>
+
+                                    <!-- Password strength -->
+                                    <div class="password-strength">
+                                        <div id="strengthBar"></div>
+                                    </div>
+
+                                    <small id="strengthText">Password strength: —</small>
+
+                                    <small class="error-message" id="passwordError"></small>
+
+                                </div>
+
+
+                                <!-- CONFIRM PASSWORD -->
+                                <div class="form-group">
+
+                                    <label for="confirmPassword">
+                                        Confirm Password <span class="text-danger">*</span>
+                                    </label>
+
+                                    <div class="input-wrapper">
+                                        <span class="input-icon">
+                                            <i class="bi bi-shield-lock"></i>
+                                        </span>
+
+                                        <input
+                                            type="password"
+                                            id="confirmPassword"
+                                            name="confirmPassword"
+                                            class="form-control"
+                                            placeholder="Repeat password"
+                                            required
+                                        >
+                                    </div>
+
+                                    <small class="error-message" id="confirmPasswordError"></small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- TERMS -->
+                            <div class="terms-check mb-4">
+
+                                <input type="checkbox" id="terms" name="terms">
+
+                                <label for="terms">
+                                    I accept and agree to the
+                                    <a href="#" data-bs-toggle="modal"
+                                    data-bs-target="#termsModal">
+                                        Terms & Conditions
+                                    </a>
+                                    <span class="text-danger">*</span>
+                                </label>
+
+                                <small class="error-message" id="termsError"></small>
+
+                            </div>
+
+
+                            <!-- SUBMIT -->
+                            <button type="submit" class="register-button">
+                                <span>Register Account</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+
+                            <!-- SUCCESS MESSAGE -->
+                            <p id="successMessage" class="success-message"></p>
+
+                        </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= TERMS MODAL ================= -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title fw-bold">Student Terms &amp; Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body small">
+                    <p>1. <strong>Eligibility:</strong> Only actively enrolled university students are permitted to create an account.</p>
+                    <p>2. <strong>Resource Sharing:</strong> All materials downloaded from this hub are intended for personal educational use only.</p>
+                    <p>3. <strong>Data Security:</strong> Your student credentials and details are stored securely.</p>
+                </div>
+                <div class="modal-footer border-top-0 pt-0">
+                    <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h2><i class="bi bi-mortarboard-fill me-2 text-primary-accent"></i>StudentHub</h2>
+                    <p>Your modern student portal for academic resources, campus events, and collaborative student services.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Quick Links</h3>
+                    <div class="footer-link-list">
+                        <a href="../index.html"><i class="bi bi-chevron-right me-1"></i> Home</a>
+                        <a href="about.html"><i class="bi bi-chevron-right me-1"></i> About</a>
+                        <a href="events.html"><i class="bi bi-chevron-right me-1"></i> Events</a>
+                        <a href="contact.html"><i class="bi bi-chevron-right me-1"></i> Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                &copy; 2026 StudentHub. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Register JavaScript -->
+    <script src="../js/register.js"></script>
+
+    <!-- <script>
+    const params = new URLSearchParams(window.location.search);
+
+    const status = params.get("status");
+    const message = params.get("message");
+
+    if (status && message) {
+
+        const messageBox =
+            document.getElementById("successMessage");
+
+        if (messageBox) {
+
+            if (status === "success") {
+
+                messageBox.textContent = message;
+                messageBox.className = "success-message";
+
+            } else {
+
+                const errors = message.split("||");
+
+                messageBox.innerHTML = "";
+
+                const heading = document.createElement("strong");
+                heading.textContent = errors[0];
+
+                const list = document.createElement("ul");
+
+                errors.slice(1).forEach(function (error) {
+
+                    const item = document.createElement("li");
+                    item.textContent = error;
+
+                    list.appendChild(item);
+                });
+
+                messageBox.appendChild(heading);
+                messageBox.appendChild(list);
+
+                messageBox.className = "error-message";
+            }
+        }
+
+        window.history.replaceState(
+            {},
+            document.title,
+            window.location.pathname
+        );
+    }
+</script> -->
+
+</body>
+</html>

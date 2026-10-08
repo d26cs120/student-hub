@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "title": "Annual Tech Talk 2026",
+        "description": "Keynote sessions on modern technology and innovation.",
+        "category": "Technical",
+        "date": "2026-10-05",
+        "time": "10:00 AM - 01:00 PM",
+        "location": "Main Auditorium"
+    },
+    {
+        "id": 2,
+        "title": "Full Stack Workshop",
+        "description": "Hands-on web development workshop covering frontend and backend technologies.",
+        "category": "Workshop",
+        "date": "2026-10-10",
+        "time": "02:00 PM - 05:00 PM",
+        "location": "Computer Lab"
+    },
+    {
+        "id": 3,
+        "title": "Inter College Hackathon",
+        "description": "A competitive coding event where students build innovative software solutions.",
+        "category": "Competition",
+        "date": "2026-10-15",
+        "time": "09:00 AM - 06:00 PM",
+        "location": "Innovation Lab"
+    },
+    {
+        "id": 4,
+        "title": "Web Development Bootcamp",
+        "description": "Learn modern HTML, CSS, JavaScript and responsive web development.",
+        "category": "Workshop",
+        "date": "2026-10-20",
+        "time": "10:00 AM - 04:00 PM",
+        "location": "Seminar Hall"
+    },
+    {
+        "id": 5,
+        "title": "AI and Machine Learning Seminar",
+        "description": "An introductory seminar covering artificial intelligence and machine learning applications.",
+        "category": "Technical",
+        "date": "2026-10-25",
+        "time": "11:00 AM - 01:00 PM",
+        "location": "Main Auditorium"
+    },
+    {
+        "id": 6,
+        "title": "Annual Sports Meet",
+        "description": "Inter-department sports competitions including cricket, football and athletics.",
+        "category": "Sports",
+        "date": "2026-11-02",
+        "time": "08:00 AM - 05:00 PM",
+        "location": "College Sports Ground"
+    },
+    {
+        "id": 7,
+        "title": "Coding Competition",
+        "description": "Test your problem-solving and programming skills through competitive coding challenges.",
+        "category": "Competition",
+        "date": "2026-11-08",
+        "time": "10:00 AM - 01:00 PM",
+        "location": "Computer Lab"
+    },
+    {
+        "id": 8,
+        "title": "Cyber Security Awareness Workshop",
+        "description": "Learn about cybersecurity, online safety, password security and common cyber threats.",
+        "category": "Workshop",
+        "date": "2026-11-12",
+        "time": "02:00 PM - 04:00 PM",
+        "location": "Seminar Hall"
+    },
+    {
+        "id": 9,
+        "title": "Cultural Fest 2026",
+        "description": "A celebration of music, dance, art and cultural performances by students.",
+        "category": "Cultural",
+        "date": "2026-11-18",
+        "time": "04:00 PM - 08:00 PM",
+        "location": "College Ground"
+    },
+    {
+        "id": 10,
+        "title": "Python Programming Workshop",
+        "description": "Practical workshop covering Python fundamentals, functions and problem solving.",
+        "category": "Workshop",
+        "date": "2026-11-22",
+        "time": "10:00 AM - 01:00 PM",
+        "location": "Programming Lab"
+    },
+    {
+        "id": 11,
+        "title": "Entrepreneurship and Startup Talk",
+        "description": "Guest speakers discuss startup ideas, innovation and entrepreneurship.",
+        "category": "Seminar",
+        "date": "2026-11-28",
+        "time": "11:00 AM - 02:00 PM",
+        "location": "Main Auditorium"
+    },
+    {
+        "id": 12,
+        "title": "UI/UX Design Challenge",
+        "description": "A design competition focused on creating user-friendly and creative digital interfaces.",
+        "category": "Competition",
+        "date": "2026-12-03",
+        "time": "09:30 AM - 03:00 PM",
+        "location": "Design Lab"
+    },
+    {
+        "id": 13,
+        "title": "Cloud Computing Seminar",
+        "description": "Introduction to cloud computing, cloud services and modern deployment practices.",
+        "category": "Technical",
+        "date": "2026-12-08",
+        "time": "10:30 AM - 01:00 PM",
+        "location": "Seminar Hall"
+    },
+    {
+        "id": 14,
+        "title": "Photography and Media Workshop",
+        "description": "Learn the basics of photography, editing and digital media production.",
+        "category": "Workshop",
+        "date": "2026-12-12",
+        "time": "02:00 PM - 05:00 PM",
+        "location": "Media Room"
+    },
+    {
+        "id": 15,
+        "title": "Annual Project Exhibition",
+        "description": "Students showcase innovative academic projects and technical solutions.",
+        "category": "Exhibition",
+        "date": "2026-12-18",
+        "time": "10:00 AM - 04:00 PM",
+        "location": "Exhibition Hall"
+    }
+]

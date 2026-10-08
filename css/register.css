@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================================================
+   1. Theme Tokens (Light Mode Default)
+   ========================================================================== */
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-glow: rgba(79, 70, 229, 0.28);
+  --primary-soft: rgba(79, 70, 229, 0.1);
+  --accent-light: #a5b4fc;
+
+  --header-bg-start: #0f172a;
+  --header-bg-end: #1e1b4b;
+
+  --body-bg: #f8fafc;
+  --footer-bg: #090d16;
+
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+
+  --text-main: #0f172a;
+  --text-sub: #64748b;
+
+  --captcha-bg: #e2e8f0;
+  --captcha-text: #312e81;
+
+  --hero-radial-start: #e0e7ff;
+  --hero-radial-end: #f8fafc;
+
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   2. Dark Mode Overrides (data-bs-theme="dark")
+   ========================================================================== */
+[data-bs-theme="dark"] {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-glow: rgba(99, 102, 241, 0.4);
+  --primary-soft: rgba(99, 102, 241, 0.18);
+  --accent-light: #c7d2fe;
+
+  --body-bg: #0b0f19;
+  --footer-bg: #030712;
+
+  --card-bg: #111827;
+  --card-border: #1f2937;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+  --text-main: #f8fafc;
+  --text-sub: #cbd5e1;
+
+  --captcha-bg: #1e293b;
+  --captcha-text: #a5b4fc;
+
+  --hero-radial-start: #1e1b4b;
+  --hero-radial-end: #0b0f19;
+}
+
+/* ==========================================================================
+   3. Global Base Settings
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-sub);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-primary-accent {
+  color: var(--accent-light);
+}
+
+/* Theme Toggle Button */
+.btn-theme-toggle {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fbbf24;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: rotate(20deg) scale(1.08);
+}
+
+/* ==========================================================================
+   4. Header & Top Bar Navigation
+   ========================================================================== */
+.site-header {
+  background: linear-gradient(135deg, var(--header-bg-start) 0%, var(--header-bg-end) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.03em;
+}
+
+.logo:hover {
+  color: #ffffff;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.login-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.navbar {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.15rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   5. Registration Section & Card Box
+   ========================================================================== */
+.register-section {
+  background: radial-gradient(circle at 50% 15%, var(--hero-radial-start) 0%, var(--hero-radial-end) 75%);
+  padding: 3.5rem 0;
+  min-height: calc(100vh - 200px);
+}
+
+.register-box {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  padding: 2.75rem 2.5rem;
+  transition: var(--transition-smooth);
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.register-icon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  font-size: 1.85rem;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.register-header h1 {
+  font-size: 1.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.register-header p {
+  font-size: 0.95rem;
+  color: var(--text-sub);
+}
+
+/* ==========================================================================
+   6. Form Controls & Layout Grids
+   ========================================================================== */
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-sub);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.input-wrapper .form-control,
+.input-wrapper .form-select {
+  padding-left: 42px;
+  height: 48px;
+  border-radius: 10px;
+  border: 1.5px solid var(--card-border);
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+}
+
+.input-wrapper .form-control:focus,
+.input-wrapper .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-glow);
+  background-color: var(--card-bg);
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   7. Gender Radio Pill Tiles
+   ========================================================================== */
+.gender-radio-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 576px) {
+  .gender-radio-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gender-option {
+  cursor: pointer;
+  margin: 0;
+}
+
+.gender-option input[type="radio"] {
+  display: none;
+}
+
+.gender-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  background-color: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-sub);
+  transition: var(--transition-smooth);
+}
+
+.gender-option input[type="radio"]:checked + .gender-pill {
+  border-color: var(--primary);
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  box-shadow: 0 2px 8px var(--primary-glow);
+}
+
+.gender-pill:hover {
+  border-color: var(--primary);
+}
+
+/* ==========================================================================
+   8. Captcha Box & Terms
+   ========================================================================== */
+.captcha-wrapper {
+  background-color: var(--body-bg);
+  border: 1px dashed var(--card-border);
+  padding: 1.1rem;
+  border-radius: 12px;
+}
+
+.captcha-wrapper label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.captcha-display {
+  background-color: var(--captcha-bg);
+  color: var(--captcha-text);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: 0.45rem;
+  padding: 0.45rem 1.5rem;
+  border-radius: 8px;
+  user-select: none;
+  text-decoration: line-through;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12);
+  display: inline-block;
+}
+
+.terms-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+}
+
+.terms-check input[type="checkbox"] {
+  margin-top: 0.25rem;
+  accent-color: var(--primary);
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.terms-check label {
+  color: var(--text-sub);
+}
+
+.terms-check a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.terms-check a:hover {
+  text-decoration: underline;
+}
+
+.register-button {
+  background: linear-gradient(135deg, var(--primary) 0%, #6366f1 100%);
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 14px var(--primary-glow);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.register-button:hover {
+  background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
+  box-shadow: 0 6px 20px var(--primary-glow);
+  transform: translateY(-2px);
+}
+
+.account-link {
+  font-size: 0.92rem;
+  color: var(--text-sub);
+}
+
+.account-link a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.account-link a:hover {
+  text-decoration: underline;
+}
+
+/* Modal */
+.modal-content {
+  background-color: var(--card-bg);
+  color: var(--text-sub);
+}
+
+/* ==========================================================================
+   9. Footer
+   ========================================================================== */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--text-sub);
+  padding: 3.5rem 0 2rem;
+}
+
+footer h2,
+footer h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+  max-width: 400px;
+}
+
+.footer-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link-list a {
+  color: var(--text-sub);
+  text-decoration: none;
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.footer-link-list a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+}
+
+/* ================= FORM VALIDATION ================= */
+
+.error-message {
+    display: block;
+    color: #dc3545;
+    font-size: 0.82rem;
+    margin-top: 5px;
+    min-height: 18px;
+}
+
+.success-message {
+    text-align: center;
+    color: #198754;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+
+/* Invalid input */
+
+.form-control.invalid,
+.form-select.invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.15rem rgba(220, 53, 69, 0.12);
+}
+
+
+/* Valid input */
+
+.form-control.valid,
+.form-select.valid {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.15rem rgba(25, 135, 84, 0.10);
+}
+
+
+/* Password strength */
+
+.password-strength {
+    width: 100%;
+    height: 5px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+#strengthBar {
+    width: 0;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+#strengthText {
+    display: block;
+    font-size: 0.78rem;
+    margin-top: 4px;
+    color: var(--text-muted);
+}
+
+
+/* Terms error */
+
+.terms-check .error-message {
+    margin-left: 0;
+}
+
+
+/* Dark mode */
+
+[data-bs-theme="dark"] .password-strength {
+    background: #374151;
+}
+
+#successMessage {
+    margin-top: 18px;
+    padding: 14px 18px;
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 500;
+    text-align: left;
+}
+
+#successMessage ul {
+    margin: 8px 0 0;
+    padding-left: 25px;
+}
+
+#successMessage li {
+    margin-bottom: 4px;
+}
+
+.success-message {
+    color: #198754;
+}
+
+.error-message {
+    color: #dc3545;
+}

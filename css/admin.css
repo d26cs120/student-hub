@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================================================
+   1. Theme Tokens (Light Mode Default)
+   ========================================================================== */
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-glow: rgba(79, 70, 229, 0.28);
+  --primary-soft: rgba(79, 70, 229, 0.1);
+  --accent-light: #a5b4fc;
+  --accent-gold: #f59e0b;
+
+  --header-bg-start: #0f172a;
+  --header-bg-end: #1e1b4b;
+
+  --body-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --footer-bg: #090d16;
+
+  --text-main: #0f172a;
+  --text-sub: #64748b;
+  --text-muted: #94a3b8;
+
+  --hero-radial-start: #e0e7ff;
+  --hero-radial-end: #f8fafc;
+
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   2. Dark Mode Overrides (data-bs-theme="dark")
+   ========================================================================== */
+[data-bs-theme="dark"] {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-glow: rgba(99, 102, 241, 0.4);
+  --primary-soft: rgba(99, 102, 241, 0.18);
+  --accent-light: #c7d2fe;
+  --accent-gold: #fbbf24;
+
+  --body-bg: #0b0f19;
+  --card-bg: #111827;
+  --border-color: #1f2937;
+  --footer-bg: #030712;
+
+  --text-main: #f8fafc;
+  --text-sub: #cbd5e1;
+  --text-muted: #64748b;
+
+  --hero-radial-start: #1e1b4b;
+  --hero-radial-end: #0b0f19;
+}
+
+/* ==========================================================================
+   3. Global Reset & Base Typography
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-sub);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-primary-accent {
+  color: var(--accent-light);
+}
+
+/* ==========================================================================
+   4. Admin Header & Navigation (FLEXBOX)
+   ========================================================================== */
+.admin-header {
+  background: linear-gradient(135deg, var(--header-bg-start) 0%, var(--header-bg-end) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.15rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 1.6rem;
+  color: var(--accent-light);
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+}
+
+.badge-admin-tag {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.admin-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 8px;
+  background-color: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.logout:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+  transform: translateY(-1px);
+}
+
+/* Theme Switcher Button */
+.btn-theme-toggle {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fbbf24;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: rotate(20deg) scale(1.08);
+}
+
+/* Admin Sub Navigation Bar */
+.admin-nav {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.65rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.admin-nav a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.92rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.admin-nav a:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-nav a.active {
+  color: #ffffff;
+  background-color: var(--primary);
+  font-weight: 600;
+  box-shadow: 0 2px 8px var(--primary-glow);
+}
+
+/* ==========================================================================
+   5. Admin Intro & Hero Section
+   ========================================================================== */
+.admin-intro {
+  background: radial-gradient(circle at 50% 10%, var(--hero-radial-start) 0%, var(--hero-radial-end) 70%);
+  border-bottom: 1px solid var(--border-color);
+  padding: 3.5rem 1.5rem;
+}
+
+.section-tag {
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50rem;
+  border: 1px solid var(--primary-soft);
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.admin-intro h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.admin-intro h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.6rem;
+}
+
+.admin-intro p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--text-sub);
+}
+
+/* ==========================================================================
+   6. Statistics Section (FLEXBOX & GRID)
+   ========================================================================== */
+.statistics {
+  padding: 3.5rem 0 2rem;
+}
+
+.stat-box {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.stat-box:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.1);
+}
+
+.stat-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  font-size: 1.85rem;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-icon-amber {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-box h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-sub);
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.stat-subtext {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   7. Admin Action Modules (FLEXBOX & GRID)
+   ========================================================================== */
+.admin-actions {
+  padding: 2rem 0 3.5rem;
+}
+
+.section-subheading h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+
+.section-subheading p {
+  font-size: 0.95rem;
+  color: var(--text-sub);
+}
+
+.action-box {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.action-box:hover {
+  transform: translateY(-6px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 16px 32px rgba(79, 70, 229, 0.12);
+}
+
+.action-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  font-size: 1.75rem;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: var(--transition-smooth);
+}
+
+.action-icon-emerald {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+}
+
+.action-icon-amber {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+}
+
+.action-box:hover .action-icon {
+  transform: scale(1.1) rotate(6deg);
+}
+
+.action-box h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.action-box p {
+  font-size: 0.92rem;
+  color: var(--text-sub);
+  margin-bottom: 1.75rem;
+  flex-grow: 1; /* Aligns all buttons evenly */
+}
+
+.action-box .btn {
+  width: 100%;
+  height: 46px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, #6366f1 100%);
+  border: none;
+  box-shadow: 0 4px 14px var(--primary-glow);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--primary-glow);
+}
+
+/* ==========================================================================
+   8. Admin Message / Status Banner
+   ========================================================================== */
+.admin-message {
+  padding: 0 0 4.5rem;
+}
+
+.message-box {
+  background-color: var(--card-bg);
+  border: 1px dashed var(--border-color);
+  border-radius: 14px;
+  padding: 1.25rem 2rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   9. Admin Footer (CSS GRID & FLEXBOX)
+   ========================================================================== */
+.admin-footer {
+  background-color: var(--footer-bg);
+  color: var(--text-muted);
+  padding: 3.5rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.footer-about h2,
+.quick-links h2 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  max-width: 420px;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.quick-links a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.copyright p {
+  margin: 0;
+}

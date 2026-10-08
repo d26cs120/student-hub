@@ -1,0 +1,482 @@
+[
+    {
+        "id": 1,
+        "name": "Aarav Patel",
+        "course": "CSE",
+        "semester": 4,
+        "skills": ["Java", "HTML", "CSS"],
+        "email": "aarav.patel@example.com"
+    },
+    {
+        "id": 2,
+        "name": "Riya Shah",
+        "course": "CSE",
+        "semester": 3,
+        "skills": ["Python", "JavaScript", "SQL"],
+        "email": "riya.shah@example.com"
+    },
+    {
+        "id": 3,
+        "name": "Krish Mehta",
+        "course": "IT",
+        "semester": 4,
+        "skills": ["Java", "DSA", "Git"],
+        "email": "krish.mehta@example.com"
+    },
+    {
+        "id": 4,
+        "name": "Ananya Desai",
+        "course": "CSE",
+        "semester": 2,
+        "skills": ["C", "HTML", "CSS"],
+        "email": "ananya.desai@example.com"
+    },
+    {
+        "id": 5,
+        "name": "Dev Patel",
+        "course": "IT",
+        "semester": 3,
+        "skills": ["Python", "Flask", "SQL"],
+        "email": "dev.patel@example.com"
+    },
+    {
+        "id": 6,
+        "name": "Mihir Joshi",
+        "course": "CSE",
+        "semester": 4,
+        "skills": ["JavaScript", "React", "Node.js"],
+        "email": "mihir.joshi@example.com"
+    },
+    {
+        "id": 7,
+        "name": "Ishita Mehta",
+        "course": "CE",
+        "semester": 5,
+        "skills": ["AutoCAD", "HTML", "Python"],
+        "email": "ishita.mehta@example.com"
+    },
+    {
+        "id": 8,
+        "name": "Yash Shah",
+        "course": "CSE",
+        "semester": 3,
+        "skills": ["Java", "DSA", "MySQL"],
+        "email": "yash.shah@example.com"
+    },
+    {
+        "id": 9,
+        "name": "Kavya Patel",
+        "course": "IT",
+        "semester": 2,
+        "skills": ["C++", "Python", "HTML"],
+        "email": "kavya.patel@example.com"
+    },
+    {
+        "id": 10,
+        "name": "Harsh Trivedi",
+        "course": "CSE",
+        "semester": 5,
+        "skills": ["Java", "Spring", "SQL"],
+        "email": "harsh.trivedi@example.com"
+    },
+    {
+        "id": 11,
+        "name": "Dhruv Shah",
+        "course": "CE",
+        "semester": 4,
+        "skills": ["C", "C++", "AutoCAD"],
+        "email": "dhruv.shah@example.com"
+    },
+    {
+        "id": 12,
+        "name": "Pooja Mehta",
+        "course": "CSE",
+        "semester": 3,
+        "skills": ["Python", "Django", "JavaScript"],
+        "email": "pooja.mehta@example.com"
+    },
+    {
+        "id": 13,
+        "name": "Raj Patel",
+        "course": "IT",
+        "semester": 5,
+        "skills": ["React", "Node.js", "MongoDB"],
+        "email": "raj.patel@example.com"
+    },
+    {
+        "id": 14,
+        "name": "Neha Joshi",
+        "course": "CSE",
+        "semester": 2,
+        "skills": ["Java", "HTML", "Bootstrap"],
+        "email": "neha.joshi@example.com"
+    },
+    {
+        "id": 15,
+        "name": "Manav Desai",
+        "course": "IT",
+        "semester": 4,
+        "skills": ["Python", "Machine Learning", "SQL"],
+        "email": "manav.desai@example.com"
+    },
+    {
+        "id": 16,
+        "name": "Aditi Sharma",
+        "course": "CSE",
+        "semester": 4,
+        "skills": ["Java", "DSA", "Git"],
+        "email": "aditi.sharma@example.com"
+    },
+    {
+        "id": 17,
+        "name": "Arjun Verma",
+        "course": "IT",
+        "semester": 3,
+        "skills": ["Python", "SQL", "Flask"],
+        "email": "arjun.verma@example.com"
+    },
+    {
+        "id": 18,
+        "name": "Simran Kapoor",
+        "course": "CSE",
+        "semester": 2,
+        "skills": ["HTML", "CSS", "JavaScript"],
+        "email": "simran.kapoor@example.com"
+    },
+    {
+        "id": 19,
+        "name": "Rohan Mehta",
+        "course": "CE",
+        "semester": 5,
+        "skills": ["AutoCAD", "C++", "Python"],
+        "email": "rohan.mehta@example.com"
+    },
+    {
+        "id": 20,
+        "name": "Nisha Patel",
+        "course": "IT",
+        "semester": 4,
+        "skills": ["React", "JavaScript", "Node.js"],
+        "email": "nisha.patel@example.com"
+    },
+    {
+        "id": 21,
+        "name": "Karan Shah",
+        "course": "CSE",
+        "semester": 5,
+        "skills": ["Java", "Spring", "MySQL"],
+        "email": "karan.shah@example.com"
+    },
+    {
+        "id": 22,
+        "name": "Meera Joshi",
+        "course": "CSE",
+        "semester": 3,
+        "skills": ["Python", "Django", "SQL"],
+        "email": "meera.joshi@example.com"
+    },
+    {
+        "id": 23,
+        "name": "Vivek Desai",
+        "course": "IT",
+        "semester": 2,
+        "skills": ["C", "C++", "Data Structures"],
+        "email": "vivek.desai@example.com"
+    },
+    {
+        "id": 24,
+        "name": "Tanvi Shah",
+        "course": "CE",
+        "semester": 4,
+        "skills": ["AutoCAD", "HTML", "CSS"],
+        "email": "tanvi.shah@example.com"
+    },
+    {
+        "id": 25,
+        "name": "Aditya Patel",
+        "course": "CSE",
+        "semester": 3,
+        "skills": ["Java", "JavaScript", "Git"],
+        "email": "aditya.patel@example.com"
+    },
+    {
+        "id": 26,
+        "name": "Sneha Trivedi",
+        "course": "IT",
+        "semester": 5,
+        "skills": ["Python", "Machine Learning", "SQL"],
+        "email": "sneha.trivedi@example.com"
+    },
+    {
+        "id": 27,
+        "name": "Rahul Joshi",
+        "course": "CSE",
+        "semester": 4,
+        "skills": ["C++", "DSA", "Competitive Programming"],
+        "email": "rahul.joshi@example.com"
+    },
+    {
+        "id": 28,
+        "name": "Isha Mehta",
+        "course": "CSE",
+        "semester": 2,
+        "skills": ["HTML", "CSS", "Bootstrap"],
+        "email": "isha.mehta@example.com"
+    },
+    {
+        "id": 29,
+        "name": "Akash Patel",
+        "course": "IT",
+        "semester": 4,
+        "skills": ["React", "MongoDB", "Node.js"],
+        "email": "akash.patel@example.com"
+    },
+    {
+        "id": 30,
+        "name": "Pallavi Shah",
+        "course": "CE",
+        "semester": 3,
+        "skills": ["AutoCAD", "Civil 3D", "Surveying"],
+        "email": "pallavi.shah@example.com"
+    },
+    {
+        "id": 31,
+        "name": "Mohit Sharma",
+        "course": "CSE",
+        "semester": 5,
+        "skills": ["Java", "Spring Boot", "REST API"],
+        "email": "mohit.sharma@example.com"
+    },
+    {
+        "id": 32,
+        "name": "Priya Desai",
+        "course": "IT",
+        "semester": 2,
+        "skills": ["Python", "HTML", "CSS"],
+        "email": "priya.desai@example.com"
+    },
+    {
+        "id": 33,
+        "name": "Nikhil Patel",
+        "course": "CSE",
+        "semester": 3,
+        "skills": ["JavaScript", "React", "Git"],
+        "email": "nikhil.patel@example.com"
+    },
+    {
+        "id": 34,
+        "name": "Kriti Shah",
+        "course": "CSE",
+        "semester": 4,
+        "skills": ["Python", "Flask", "JavaScript"],
+        "email": "kriti.shah@example.com"
+    },
+    {
+        "id": 35,
+        "name": "Sahil Mehta",
+        "course": "IT",
+        "semester": 5,
+        "skills": ["Java", "DSA", "SQL"],
+        "email": "sahil.mehta@example.com"
+    },
+    {
+        "id": 36,
+        "name": "Neel Joshi",
+        "course": "CE",
+        "semester": 2,
+        "skills": ["C", "AutoCAD", "Engineering Drawing"],
+        "email": "neel.joshi@example.com"
+    },
+    {
+        "id": 37,
+        "name": "Bhavya Patel",
+        "course": "CSE",
+        "semester": 4,
+        "skills": ["C++", "DSA", "GitHub"],
+        "email": "bhavya.patel@example.com"
+    },
+    {
+        "id": 38,
+        "name": "Yuvraj Shah",
+        "course": "IT",
+        "semester": 3,
+        "skills": ["Python", "Django", "JavaScript"],
+        "email": "yuvraj.shah@example.com"
+    },
+    {
+        "id": 39,
+        "name": "Muskan Desai",
+        "course": "CSE",
+        "semester": 2,
+        "skills": ["HTML", "CSS", "UI/UX"],
+        "email": "muskan.desai@example.com"
+    },
+    {
+        "id": 40,
+        "name": "Varun Mehta",
+        "course": "IT",
+        "semester": 4,
+        "skills": ["Node.js", "MongoDB", "Express"],
+        "email": "varun.mehta@example.com"
+    },
+    {
+        "id": 41,
+        "name": "Shreya Patel",
+        "course": "CSE",
+        "semester": 5,
+        "skills": ["Java", "Android", "Firebase"],
+        "email": "shreya.patel@example.com"
+    },
+    {
+        "id": 42,
+        "name": "Aman Shah",
+        "course": "CE",
+        "semester": 3,
+        "skills": ["AutoCAD", "C++", "MATLAB"],
+        "email": "aman.shah@example.com"
+    },
+    {
+        "id": 43,
+        "name": "Ritika Joshi",
+        "course": "IT",
+        "semester": 2,
+        "skills": ["Python", "SQL", "Data Analysis"],
+        "email": "ritika.joshi@example.com"
+    },
+    {
+        "id": 44,
+        "name": "Devansh Patel",
+        "course": "CSE",
+        "semester": 4,
+        "skills": ["React", "TypeScript", "JavaScript"],
+        "email": "devansh.patel@example.com"
+    },
+    {
+        "id": 45,
+        "name": "Sakshi Mehta",
+        "course": "CSE",
+        "semester": 3,
+        "skills": ["Java", "Spring Boot", "MySQL"],
+        "email": "sakshi.mehta@example.com"
+    },
+    {
+        "id": 46,
+        "name": "Harshil Shah",
+        "course": "IT",
+        "semester": 5,
+        "skills": ["Python", "Machine Learning", "TensorFlow"],
+        "email": "harshil.shah@example.com"
+    },
+    {
+        "id": 47,
+        "name": "Anjali Desai",
+        "course": "CE",
+        "semester": 4,
+        "skills": ["AutoCAD", "Revit", "Civil Engineering"],
+        "email": "anjali.desai@example.com"
+    },
+    {
+        "id": 48,
+        "name": "Rakesh Patel",
+        "course": "CSE",
+        "semester": 2,
+        "skills": ["C", "C++", "DSA"],
+        "email": "rakesh.patel@example.com"
+    },
+    {
+        "id": 49,
+        "name": "Mansi Shah",
+        "course": "IT",
+        "semester": 3,
+        "skills": ["HTML", "CSS", "Bootstrap"],
+        "email": "mansi.shah@example.com"
+    },
+    {
+        "id": 50,
+        "name": "Jay Mehta",
+        "course": "CSE",
+        "semester": 5,
+        "skills": ["Java", "Kotlin", "Android"],
+        "email": "jay.mehta@example.com"
+    },
+    {
+        "id": 51,
+        "name": "Komal Joshi",
+        "course": "CSE",
+        "semester": 4,
+        "skills": ["Python", "Flask", "REST API"],
+        "email": "komal.joshi@example.com"
+    },
+    {
+        "id": 52,
+        "name": "Parth Desai",
+        "course": "IT",
+        "semester": 2,
+        "skills": ["JavaScript", "React", "CSS"],
+        "email": "parth.desai@example.com"
+    },
+    {
+        "id": 53,
+        "name": "Aniket Patel",
+        "course": "CE",
+        "semester": 5,
+        "skills": ["AutoCAD", "STAAD Pro", "Surveying"],
+        "email": "aniket.patel@example.com"
+    },
+    {
+        "id": 54,
+        "name": "Divya Shah",
+        "course": "CSE",
+        "semester": 3,
+        "skills": ["Java", "Python", "SQL"],
+        "email": "divya.shah@example.com"
+    },
+    {
+        "id": 55,
+        "name": "Manish Mehta",
+        "course": "IT",
+        "semester": 4,
+        "skills": ["Node.js", "Express", "MongoDB"],
+        "email": "manish.mehta@example.com"
+    },
+    {
+        "id": 56,
+        "name": "Rhea Patel",
+        "course": "CSE",
+        "semester": 2,
+        "skills": ["HTML", "CSS", "JavaScript"],
+        "email": "rhea.patel@example.com"
+    },
+    {
+        "id": 57,
+        "name": "Suresh Joshi",
+        "course": "CE",
+        "semester": 3,
+        "skills": ["AutoCAD", "C", "Construction Planning"],
+        "email": "suresh.joshi@example.com"
+    },
+    {
+        "id": 58,
+        "name": "Piyush Shah",
+        "course": "CSE",
+        "semester": 5,
+        "skills": ["C++", "DSA", "Competitive Programming"],
+        "email": "piyush.shah@example.com"
+    },
+    {
+        "id": 59,
+        "name": "Nandini Desai",
+        "course": "IT",
+        "semester": 4,
+        "skills": ["Python", "Data Analysis", "SQL"],
+        "email": "nandini.desai@example.com"
+    },
+    {
+        "id": 60,
+        "name": "Tejas Patel",
+        "course": "CSE",
+        "semester": 3,
+        "skills": ["JavaScript", "React", "Node.js"],
+        "email": "tejas.patel@example.com"
+    }
+]

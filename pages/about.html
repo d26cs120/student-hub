@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover StudentHub - The official student portal empowering academic success, research, and campus engagement.">
+    <title>About Us | StudentHub University Portal</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- About Page Dedicated CSS -->
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+
+<body>
+
+    <!-- ================= TOP NOTICE BAR ================= -->
+    <aside class="top-announcement-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="announcement-text">
+                <span class="badge-accent">ANNOUNCEMENT</span>
+                <span>Fall Semester 2026 Academic Registration is now open.</span>
+            </div>
+            <div class="quick-support-links d-none d-md-flex gap-3">
+                <a href="faq.html"><i class="bi bi-question-circle me-1"></i> Helpdesk</a>
+                <a href="contact.html"><i class="bi bi-geo-alt me-1"></i> Campus Directory</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ================= MAIN HEADER & NAV ================= -->
+    <header class="site-header">
+        <div class="top-header container">
+            <!-- University Portal Logo -->
+            <a href="../index.html" class="logo" aria-label="StudentHub Home">
+                <div class="logo-shield">
+                    <i class="bi bi-mortarboard-fill"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-title">StudentHub</span>
+                    <span class="brand-subtitle">UNIVERSITY ACADEMIC PORTAL</span>
+                </div>
+            </a>
+
+            <!-- Header Actions with Theme Switcher -->
+            <div class="header-actions">
+                <!-- Dark / Light Theme Toggle -->
+                <button class="btn-theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Theme">
+                    <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                </button>
+
+                <a href="login.html" class="btn-portal-login">
+                    <i class="bi bi-person-lock me-1"></i> Login
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#studentNav" aria-controls="studentNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="studentNav">
+                    <div class="navbar-nav me-auto">
+                        <a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1"></i> Home</a>
+                        <a class="nav-link active" href="about.html" aria-current="page"><i class="bi bi-bank me-1"></i> About</a>
+                        <a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2 me-1"></i> Dashboard</a>
+                        <a class="nav-link" href="events.html"><i class="bi bi-calendar-event me-1"></i> Events</a>
+                        <a class="nav-link" href="faq.html"><i class="bi bi-patch-question me-1"></i> FAQ</a>
+                        <a class="nav-link" href="feedback.html"><i class="bi bi-chat-square-text me-1"></i> Feedback</a>
+                        <a class="nav-link" href="contact.html"><i class="bi bi-headset me-1"></i> Contact</a>
+                    </div>
+                    <div class="portal-status d-none d-lg-flex align-items-center">
+                        <span class="status-indicator"></span> Portal Operational
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- ================= HERO SECTION ================= -->
+        <section class="about-hero">
+            <div class="container text-center">
+                <span class="section-tag">
+                    <i class="bi bi-award-fill me-1"></i> INSTITUTIONAL EXCELLENCE
+                </span>
+                <h1>Empowering Academic &amp; Student Life</h1>
+                <p class="hero-description">StudentHub is the unified digital campus environment engineered to connect learners, faculty, administrative services, and academic research in one central hub.</p>
+            </div>
+        </section>
+
+        <!-- ================= KEY STATS COUNTER ================= -->
+        <section class="stats-ribbon">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>25,000+</h3>
+                        <p>Enrolled Students</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>150+</h3>
+                        <p>Undergraduate &amp; Postgrad Programs</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>98.4%</h3>
+                        <p>Student Satisfaction Rate</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Digital Academic Access</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= MISSION & VALUES ================= -->
+        <section class="about-pillars">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">FOUNDATIONAL PILLARS</span>
+                    <h2>Our Commitment to Education</h2>
+                    <p>Designed around modern pedagogical needs and seamless university administration.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- PILLAR 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="pillar-card h-100">
+                            <div class="pillar-icon">
+                                <i class="bi bi-bullseye"></i>
+                            </div>
+                            <h3>Academic Mission</h3>
+                            <p>To eliminate administrative bottlenecks and empower students with real-time access to coursework, grades, exam circulars, and departmental resources.</p>
+                            <ul class="pillar-list">
+                                <li><i class="bi bi-check2-circle me-2"></i> Centralized Study Repositories</li>
+                                <li><i class="bi bi-check2-circle me-2"></i> Real-time Grading &amp; Attendance</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <!-- PILLAR 2 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="pillar-card h-100">
+                            <div class="pillar-icon">
+                                <i class="bi bi-compass"></i>
+                            </div>
+                            <h3>Institutional Vision</h3>
+                            <p>To cultivate an innovative, digitally-inclusive campus culture where scholastic achievement, collaborative research, and student wellbeing thrive together.</p>
+                            <ul class="pillar-list">
+                                <li><i class="bi bi-check2-circle me-2"></i> Cross-Disciplinary Collaboration</li>
+                                <li><i class="bi bi-check2-circle me-2"></i> Paperless Campus Ecosystem</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <!-- PILLAR 3 -->
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <article class="pillar-card h-100">
+                            <div class="pillar-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h3>Student Services</h3>
+                            <p>Comprehensive assistance encompassing counseling, career advancement programs, student grievances, scholarship databases, and alumni networks.</p>
+                            <ul class="pillar-list">
+                                <li><i class="bi bi-check2-circle me-2"></i> Transparent Feedback Systems</li>
+                                <li><i class="bi bi-check2-circle me-2"></i> Dedicated Academic Advisors</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= LEADERSHIP & FACULTY BOARD ================= -->
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">UNIVERSITY GOVERNANCE</span>
+                    <h2>Academic Leadership &amp; Board</h2>
+                    <p>Meet the directors, faculty leads, and administrators guiding our digital campus vision.</p>
+                </div>
+
+                <div class="leadership-grid">
+                    <article class="leader-card">
+                        <div class="leader-avatar">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Dr. Aris Thorne</h3>
+                            <span class="leader-designation">Dean of Academic Affairs</span>
+                            <p class="leader-dept">Ph.D. in Computer Systems, 18+ Years Higher Education Leadership</p>
+                        </div>
+                    </article>
+
+                    <article class="leader-card">
+                        <div class="leader-avatar">
+                            <i class="bi bi-person-workspace"></i>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Prof. Elena Rostova</h3>
+                            <span class="leader-designation">Director of Student Services</span>
+                            <p class="leader-dept">M.Ed., Student Welfare and Campus Operations Strategy</p>
+                        </div>
+                    </article>
+
+                    <article class="leader-card">
+                        <div class="leader-avatar">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Dr. Marcus Vance</h3>
+                            <span class="leader-designation">Chief Information Officer (CIO)</span>
+                            <p class="leader-dept">Overseeing Campus IT Infrastructure, LMS &amp; Portal Security</p>
+                        </div>
+                    </article>
+
+                    <article class="leader-card">
+                        <div class="leader-avatar">
+                            <i class="bi bi-journal-bookmark-fill"></i>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Dr. Sunita Rao</h3>
+                            <span class="leader-designation">Head of Registrar &amp; Admissions</span>
+                            <p class="leader-dept">Academic Accreditations, Grading Policies &amp; Records</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ACCREDITATIONS & BADGES ================= -->
+        <section class="accreditations-section">
+            <div class="container text-center">
+                <h3 class="mb-4 text-muted small fw-bold text-uppercase">Recognized &amp; Accredited By</h3>
+                <div class="accreditation-badges">
+                    <div class="badge-item"><i class="bi bi-patch-check-fill me-2 text-indigo"></i> NAAC 'A++' Grade Accredited</div>
+                    <div class="badge-item"><i class="bi bi-shield-fill-check me-2 text-indigo"></i> ISO 9001:2015 Certified Campus</div>
+                    <div class="badge-item"><i class="bi bi-mortarboard-fill me-2 text-indigo"></i> UGC Recognized Institution</div>
+                    <div class="badge-item"><i class="bi bi-globe me-2 text-indigo"></i> Global Academic League Member</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- UNIVERSITY PORTAL DETAILS -->
+                <div class="footer-col brand-col">
+                    <div class="footer-logo mb-3">
+                        <i class="bi bi-mortarboard-fill me-2 text-accent"></i>
+                        <span class="fw-bold fs-5 text-white">StudentHub University</span>
+                    </div>
+                    <p class="footer-desc">The official student management and academic collaboration ecosystem. Dedicated to scholastic innovation and student welfare.</p>
+                    <div class="footer-campus-info mt-3">
+                        <p class="mb-1"><i class="bi bi-geo-alt me-2 text-accent"></i> 100 University Boulevard, Academic City</p>
+                        <p class="mb-0"><i class="bi bi-envelope me-2 text-accent"></i> registrar@university.edu</p>
+                    </div>
+                </div>
+
+                <!-- ACADEMIC LINKS -->
+                <div class="footer-col">
+                    <h4>Academics</h4>
+                    <div class="footer-links">
+                        <a href="../index.html"><i class="bi bi-chevron-right me-1"></i> University Home</a>
+                        <a href="about.html"><i class="bi bi-chevron-right me-1"></i> About Institution</a>
+                        <a href="events.html"><i class="bi bi-chevron-right me-1"></i> Academic Calendar</a>
+                        <a href="dashboard.html"><i class="bi bi-chevron-right me-1"></i> Course Catalog</a>
+                    </div>
+                </div>
+
+                <!-- STUDENT SUPPORT -->
+                <div class="footer-col">
+                    <h4>Student Support</h4>
+                    <div class="footer-links">
+                        <a href="faq.html"><i class="bi bi-chevron-right me-1"></i> Knowledge Base &amp; FAQ</a>
+                        <a href="feedback.html"><i class="bi bi-chevron-right me-1"></i> Grievance Redressal</a>
+                        <a href="contact.html"><i class="bi bi-chevron-right me-1"></i> Helpdesk &amp; IT Support</a>
+                        <a href="register.html"><i class="bi bi-chevron-right me-1"></i> New Student Enrolment</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- COPYRIGHT & POLICIES -->
+            <div class="copyright-bar d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="mb-0">&copy; 2026 StudentHub University. All Academic Rights Reserved.</p>
+                <div class="footer-legal-links mt-2 mt-md-0">
+                    <a href="#">Privacy Policy</a>
+                    <span class="mx-2 text-muted">|</span>
+                    <a href="#">Academic Regulations</a>
+                    <span class="mx-2 text-muted">|</span>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Theme Switcher Script -->
+    <script src="../js/about.js"></script>
+
+</body>
+</html>

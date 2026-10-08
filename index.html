@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Academic Portal</title>
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <!-- ================= NOTIFICATION BANNER ================= -->
+
+    <div id="notificationBanner" class="notification-banner">
+
+        <div>
+            <i class="bi bi-info-circle-fill"></i>
+
+            <span>
+                Welcome to StudentHub! New academic events are now available.
+            </span>
+        </div>
+
+        <button id="closeNotification" aria-label="Close notification">
+            &times;
+        </button>
+
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <!-- TOP HEADER -->
+        <div class="container py-3">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                
+                <!-- LOGO -->
+                <div class="logo fs-2 fw-bold text-white d-flex align-items-center gap-2">
+                    <i class="bi bi-mortarboard-fill text-primary-accent"></i> StudentHub
+                </div>
+
+                <!-- RIGHT CONTROLS: THEME SWITCHER & AUTH -->
+                <div class="d-flex align-items-center gap-3">
+                    <!-- Dark / Light Theme Toggle -->
+                    <button class="btn-theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Theme">
+                        <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                    </button>
+
+                    <!-- LOGIN / REGISTER -->
+                    <div class="auth-links">
+                        <a href="pages/login.html" class="text-white text-decoration-none">
+                            <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                        </a>
+                        <span class="text-white-50 mx-1">|</span>
+                        <a href="pages/register.html" class="text-white text-decoration-none">
+                            <i class="bi bi-person-plus me-1"></i> Register
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= NAVIGATION ================= -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <!-- MOBILE MENU BUTTON -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#studentNav" aria-controls="studentNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- NAVIGATION LINKS -->
+                <div class="collapse navbar-collapse" id="studentNav">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" href="index.html"><i class="bi bi-house-door me-1"></i> Home</a>
+                        <a class="nav-link" href="pages/about.html"><i class="bi bi-info-circle me-1"></i> About</a>
+                        <a class="nav-link" href="pages/dashboard.html"><i class="bi bi-speedometer2 me-1"></i> Dashboard</a>
+                        <a class="nav-link" href="pages/events.html"><i class="bi bi-calendar-event me-1"></i> Events</a>
+                        <a class="nav-link" href="pages/faq.html"><i class="bi bi-question-circle me-1"></i> FAQ</a>
+                        <a class="nav-link" href="pages/feedback.html"><i class="bi bi-chat-square-dots me-1"></i> Feedback</a>
+                        <a class="nav-link" href="pages/contact.html"><i class="bi bi-envelope me-1"></i> Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <section class="hero text-center py-5">
+            <div class="container py-5">
+                <span class="badge-soft-primary mb-3 d-inline-block">
+                    <i class="bi bi-stars me-1"></i> Student Success Ecosystem
+                </span>
+                <h1 class="display-4 fw-bold">Welcome to StudentHub</h1>
+                <p class="lead">Your one-stop portal for academic resources, campus events, real-time updates, and student services.</p>
+                
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
+                    <a href="pages/login.html" class="btn btn-primary px-4">
+                        <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                    </a>
+                    <a href="pages/register.html" class="btn btn-outline-primary px-4">
+                        <i class="bi bi-person-plus me-1"></i> Register
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FEATURES ================= -->
+        <section class="features py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">What You Can Do</h2>
+
+                <div class="row g-4">
+                    <!-- EVENTS -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center d-flex flex-column">
+                                <div class="feature-icon-wrapper mb-3">
+                                    <i class="bi bi-calendar4-event"></i>
+                                </div>
+                                <h3 class="card-title">Events</h3>
+                                <p class="card-text">View and participate in upcoming academic seminars, hackathons, and campus activities.</p>
+                                <a href="pages/events.html" class="btn btn-primary mt-auto">
+                                    Explore <i class="bi bi-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RESOURCES -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center d-flex flex-column">
+                                <div class="feature-icon-wrapper mb-3">
+                                    <i class="bi bi-journal-bookmark"></i>
+                                </div>
+                                <h3 class="card-title">Resources</h3>
+                                <p class="card-text">Access lecture materials, reference guides, course notes, and digital study tools.</p>
+                                <a href="index.html" class="btn btn-primary mt-auto">
+                                    Explore <i class="bi bi-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UPDATES -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center d-flex flex-column">
+                                <div class="feature-icon-wrapper mb-3">
+                                    <i class="bi bi-megaphone"></i>
+                                </div>
+                                <h3 class="card-title">Updates</h3>
+                                <p class="card-text">Stay informed with real-time university notices, exam schedules, and circulars.</p>
+                                <a href="pages/dashboard.html" class="btn btn-primary mt-auto">
+                                    Explore <i class="bi bi-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FEEDBACK -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center d-flex flex-column">
+                                <div class="feature-icon-wrapper mb-3">
+                                    <i class="bi bi-chat-heart"></i>
+                                </div>
+                                <h3 class="card-title">Feedback</h3>
+                                <p class="card-text">Share your reviews, suggestions, and academic feedback directly with mentors.</p>
+                                <a href="pages/feedback.html" class="btn btn-primary mt-auto">
+                                    Explore <i class="bi bi-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="index-about py-5 text-center">
+            <div class="container">
+                <h2 class="mb-3">About StudentHub</h2>
+                <p class="lead">StudentHub is a dedicated portal engineered to bridge students, mentors, and resources into one seamless digital campus experience.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- ABOUT -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h3><i class="bi bi-mortarboard-fill me-2 text-primary-accent"></i>StudentHub</h3>
+                    <p>Centralized student portal for academic resources, administrative services, and campus collaboration.</p>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h3>Quick Links</h3>
+                    <a href="index.html" class="d-block"><i class="bi bi-chevron-right me-1"></i> Home</a>
+                    <a href="pages/about.html" class="d-block"><i class="bi bi-chevron-right me-1"></i> About</a>
+                    <a href="pages/events.html" class="d-block"><i class="bi bi-chevron-right me-1"></i> Events</a>
+                    <a href="pages/contact.html" class="d-block"><i class="bi bi-chevron-right me-1"></i> Contact</a>
+                </div>
+
+                <!-- SUPPORT -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h3>Support</h3>
+                    <a href="pages/faq.html" class="d-block"><i class="bi bi-question-diamond me-1"></i> FAQ</a>
+                    <a href="pages/feedback.html" class="d-block"><i class="bi bi-chat-dots me-1"></i> Feedback</a>
+                    <a href="pages/contact.html" class="d-block"><i class="bi bi-headset me-1"></i> Help Center</a>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h3>Contact Us</h3>
+                    <p><i class="bi bi-envelope-at me-2"></i> support@studenthub.com</p>
+                    <p><i class="bi bi-telephone-outbound me-2"></i> +91 9876543210</p>
+                    <p><i class="bi bi-geo-alt me-2"></i> University Campus, Block A</p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center">
+                &copy; 2026 StudentHub. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= MODAL POPUP ================= -->
+
+    <div id="welcomeModal" class="custom-modal">
+
+        <div class="custom-modal-content">
+
+            <button id="closeModal" class="modal-close">
+                &times;
+            </button>
+
+            <h2>Welcome to StudentHub</h2>
+
+            <p>
+                Explore academic resources, events, student services
+                and other features available on StudentHub.
+            </p>
+
+            <button id="modalOkBtn" class="btn btn-primary">
+                Continue
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

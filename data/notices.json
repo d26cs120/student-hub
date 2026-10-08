@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "title": "Welcome to StudentHub Portal!",
+        "description": "Welcome to the new StudentHub student portal.",
+        "category": "General",
+        "date": "2026-09-01"
+    },
+    {
+        "id": 2,
+        "title": "Mid Term Exam Schedule Released",
+        "description": "The mid term examination schedule has been published.",
+        "category": "Examination",
+        "date": "2026-09-05"
+    },
+    {
+        "id": 3,
+        "title": "Library Timings Updated",
+        "description": "The library will remain open from 8:00 AM to 8:00 PM.",
+        "category": "Library",
+        "date": "2026-09-08"
+    },
+    {
+        "id": 4,
+        "title": "Assignment Submission Deadline",
+        "description": "Students must submit pending assignments before the deadline.",
+        "category": "Academic",
+        "date": "2026-09-10"
+    },
+    {
+        "id": 5,
+        "title": "College Holiday Announcement",
+        "description": "The college will remain closed on the upcoming holiday.",
+        "category": "General",
+        "date": "2026-09-12"
+    },
+    {
+        "id": 6,
+        "title": "Internal Practical Examination",
+        "description": "Internal practical examinations will begin next week.",
+        "category": "Examination",
+        "date": "2026-09-15"
+    },
+    {
+        "id": 7,
+        "title": "Workshop Registration Open",
+        "description": "Registration is now open for the upcoming technical workshop.",
+        "category": "Workshop",
+        "date": "2026-09-18"
+    },
+    {
+        "id": 8,
+        "title": "Cultural Event Registration",
+        "description": "Students can register for upcoming cultural activities.",
+        "category": "Events",
+        "date": "2026-09-20"
+    },
+    {
+        "id": 9,
+        "title": "New Computer Lab Timings",
+        "description": "Updated operating hours for the computer laboratory.",
+        "category": "Laboratory",
+        "date": "2026-09-22"
+    },
+    {
+        "id": 10,
+        "title": "Semester Project Guidelines",
+        "description": "Semester project guidelines have been published for students.",
+        "category": "Academic",
+        "date": "2026-09-24"
+    },
+    {
+        "id": 11,
+        "title": "Sports Meet Registration",
+        "description": "Students interested in sports activities can register now.",
+        "category": "Sports",
+        "date": "2026-09-26"
+    },
+    {
+        "id": 12,
+        "title": "Placement Cell Orientation",
+        "description": "An orientation session will be conducted by the placement cell.",
+        "category": "Placement",
+        "date": "2026-09-28"
+    },
+    {
+        "id": 13,
+        "title": "Faculty Meeting Notice",
+        "description": "Important academic updates will be discussed in the faculty meeting.",
+        "category": "General",
+        "date": "2026-09-30"
+    },
+    {
+        "id": 14,
+        "title": "Coding Club Registration",
+        "description": "Students can join the coding club by completing the registration form.",
+        "category": "Club",
+        "date": "2026-10-02"
+    },
+    {
+        "id": 15,
+        "title": "Attendance Reminder",
+        "description": "Students are reminded to maintain the required attendance percentage.",
+        "category": "Academic",
+        "date": "2026-10-04"
+    }
+]

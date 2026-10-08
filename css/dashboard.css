@@ -1,0 +1,767 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================================================
+   1. Theme Tokens (Light Mode Default)
+   ========================================================================== */
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-glow: rgba(79, 70, 229, 0.28);
+  --primary-soft: rgba(79, 70, 229, 0.1);
+  --accent-light: #a5b4fc;
+
+  --header-bg-start: #0f172a;
+  --header-bg-end: #1e1b4b;
+
+  --body-bg: #f8fafc;
+  --section-alt-bg: #ffffff;
+  --footer-bg: #090d16;
+
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+  --card-shadow-hover: 0 16px 32px rgba(79, 70, 229, 0.12);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --hero-radial-start: #e0e7ff;
+  --hero-radial-end: #f8fafc;
+
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   2. Dark Mode Overrides (data-bs-theme="dark")
+   ========================================================================== */
+[data-bs-theme="dark"] {
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-glow: rgba(99, 102, 241, 0.4);
+  --primary-soft: rgba(99, 102, 241, 0.18);
+  --accent-light: #c7d2fe;
+
+  --body-bg: #0b0f19;
+  --section-alt-bg: #111827;
+  --footer-bg: #030712;
+
+  --card-bg: #111827;
+  --card-border: #1f2937;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 16px 32px rgba(99, 102, 241, 0.2);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+
+  --hero-radial-start: #1e1b4b;
+  --hero-radial-end: #0b0f19;
+}
+
+/* ==========================================================================
+   3. Global Reset & Base
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-indigo {
+  color: var(--primary-color) !important;
+}
+
+.text-primary-accent {
+  color: var(--accent-light);
+}
+
+/* ==========================================================================
+   4. Header & Top Bar Navigation (FLEXBOX)
+   ========================================================================== */
+header {
+  background: linear-gradient(135deg, var(--header-bg-start) 0%, var(--header-bg-end) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* FLEXBOX: Top bar layout */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* FLEXBOX: Logo item */
+.logo {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: -0.03em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo:hover {
+  color: #ffffff;
+}
+
+/* FLEXBOX: User Controls wrapper */
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.welcome {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* FLEXBOX: Logout Button */
+.logout {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  background-color: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.logout:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+  transform: translateY(-1px);
+}
+
+/* FLEXBOX: Theme Switcher */
+.btn-theme-toggle {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fbbf24;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: rotate(20deg) scale(1.08);
+}
+
+/* FLEXBOX: Horizontal sub-navigation bar */
+header nav {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+header nav a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+header nav a:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+header nav a.active {
+  color: #ffffff;
+  background-color: var(--primary-color);
+  font-weight: 600;
+  box-shadow: 0 2px 8px var(--primary-glow);
+}
+
+/* ==========================================================================
+   5. Dashboard Intro (FLEXBOX)
+   ========================================================================== */
+.dashboard-intro {
+  background: radial-gradient(circle at 50% 20%, var(--hero-radial-start) 0%, var(--hero-radial-end) 70%);
+  border-bottom: 1px solid var(--card-border);
+  padding: 3.5rem 0;
+}
+
+.section-tag {
+  background-color: var(--primary-soft);
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50rem;
+  border: 1px solid var(--primary-soft);
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.dashboard-intro h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-intro p {
+  max-width: 540px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   6. Metric Summary Cards (FLEXBOX)
+   ========================================================================== */
+.dashboard-cards {
+  padding: 3.5rem 0 2rem;
+}
+
+/* FLEXBOX: Centered column structure inside cards */
+.dashboard-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  transition: var(--transition-smooth);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+/* FLEXBOX: Icon badge centering */
+.dashboard-card .icon {
+  width: 58px;
+  height: 58px;
+  background-color: var(--primary-soft);
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  transition: var(--transition-smooth);
+}
+
+.dashboard-card:hover .icon {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  transform: scale(1.1) rotate(6deg);
+}
+
+.dashboard-card h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.dashboard-card .stat-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+/* ==========================================================================
+   7. Recent Notices Section (FLEXBOX)
+   ========================================================================== */
+.recent-notices {
+  padding: 2.5rem 0;
+}
+
+.recent-notices h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.recent-notices h2::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  margin-top: 0.4rem;
+}
+
+/* FLEXBOX: Vertical notice list */
+.notice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+/* FLEXBOX: Notice card horizontal distribution */
+.notice {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.1rem 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-smooth);
+}
+
+.notice:hover {
+  transform: translateX(4px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.notice .notice-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.notice time {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ==========================================================================
+   8. Quick Action Buttons (CSS GRID)
+   ========================================================================== */
+.dashboard-links {
+  padding: 2.5rem 0 4rem;
+}
+
+.dashboard-links h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.dashboard-links h2::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  margin-top: 0.4rem;
+}
+
+/* CSS GRID: Auto-responsive 1 to 4 button grid */
+.link-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+/* FLEXBOX: Centered button content with icons */
+.link-buttons button {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #6366f1 100%);
+  color: #ffffff;
+  border: none;
+  padding: 0.95rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 14px var(--primary-glow);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.link-buttons button:hover {
+  background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-color) 100%);
+  box-shadow: 0 6px 20px var(--primary-glow);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   9. Footer (CSS GRID & FLEXBOX)
+   ========================================================================== */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--text-muted);
+  padding: 3.5rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* CSS GRID: 2-column footer layout (collapses to 1 on mobile) */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-about h2,
+.footer-links h2 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  max-width: 380px;
+}
+
+/* FLEXBOX: Footer vertical links */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+/* ================= STUDENT DIRECTORY ================= */
+
+.student-directory {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+
+.student-header {
+    margin-bottom: 22px;
+}
+
+.student-header h2 {
+    margin-bottom: 6px;
+}
+
+.student-header p {
+    margin: 0;
+    color: #777b8a;
+}
+
+
+/* Controls */
+
+.student-controls {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#studentSearch {
+    width: 280px;
+}
+
+#studentSearch,
+#courseFilter,
+#studentSort {
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #dddff0;
+    border-radius: 7px;
+    background: #fff;
+    outline: none;
+}
+
+#courseFilter,
+#studentSort {
+    min-width: 150px;
+}
+
+
+/* 3 × 3 Student Grid */
+
+#studentsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+
+/* Student Cards */
+
+.student-card {
+    padding: 18px;
+    background: #fff;
+    border: 1px solid #e5e7ef;
+    border-radius: 10px;
+    min-height: 120px;
+    box-sizing: border-box;
+}
+
+.student-card h3 {
+    margin: 0 0 7px;
+    font-size: 16px;
+}
+
+.student-card p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #777b8a;
+}
+
+.student-course {
+    color: #5548e8 !important;
+    font-weight: 600;
+}
+
+
+/* Pagination */
+
+#studentPagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+#studentPagination button {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #dddff0;
+    border-radius: 7px;
+    background: white;
+    cursor: pointer;
+}
+
+#studentPagination button.active {
+    background: #5548e8;
+    color: white;
+    border-color: #5548e8;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .student-directory {
+        width: 92%;
+        padding: 25px 20px;
+    }
+
+    #studentsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    #studentSearch,
+    #courseFilter,
+    #studentSort {
+        width: 100%;
+    }
+}
+
+/* ================= NOTICES ================= */
+
+.notice-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#noticeSearch,
+#noticeCategory,
+#noticeSort {
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #dddff0;
+    border-radius: 7px;
+    background: white;
+}
+
+#noticeSearch {
+    width: 280px;
+}
+
+#noticeCategory,
+#noticeSort {
+    min-width: 160px;
+}
+
+
+/* Notice Cards */
+
+#noticesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notice-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 20px;
+
+    background: white;
+    border: 1px solid #e5e7ef;
+    border-radius: 10px;
+}
+
+.notice-content h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.notice-content p {
+    margin: 0 0 8px;
+    color: #777b8a;
+    font-size: 13px;
+}
+
+.notice-category {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 9px;
+    border-radius: 20px;
+    background: #eeeeff;
+    color: #5548e8;
+}
+
+.notice-date {
+    color: #8b8fa3;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+/* Pagination */
+
+#noticePagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+#noticePagination button {
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid #dddff0;
+    border-radius: 7px;
+
+    background: white;
+    cursor: pointer;
+}
+
+#noticePagination button.active {
+    background: #5548e8;
+    color: white;
+    border-color: #5548e8;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    #noticeSearch,
+    #noticeCategory,
+    #noticeSort {
+        width: 100%;
+    }
+
+    .notice-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
